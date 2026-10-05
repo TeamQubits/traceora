@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRACEORA — Farm-to-Fork Traceability</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f7faf9;color:#102a2a;line-height:1.6}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 7%;background:#fff;border-bottom:1px solid #e2ebe8}
+.logo{font-size:1.5rem;font-weight:800;letter-spacing:2px;color:#0c6255}
+.badge{font-size:.78rem;padding:7px 12px;border:1px solid #b9d8d0;border-radius:999px;color:#0c6255;background:#f1f8f5}
+.hero{min-height:72vh;display:grid;place-items:center;padding:80px 7%;background:linear-gradient(135deg,#fff,#edf7f3)}
+.hero-inner{max-width:1050px;text-align:center}
+.eyebrow{display:inline-block;margin-bottom:18px;color:#0c6255;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;font-size:.82rem}
+h1{font-size:clamp(3.4rem,10vw,7rem);letter-spacing:8px;line-height:1;color:#0b2927}
+.tagline{margin:20px 0 18px;font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:600;color:#24675d}
+.description{max-width:780px;margin:auto;font-size:1.05rem;color:#536765}
+.buttons{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:700;border:1px solid #0c6255}
+.primary{background:#0c6255;color:#fff}.secondary{color:#0c6255;background:#fff}
+.section{padding:70px 7%}.section h2{text-align:center;font-size:2rem;margin-bottom:12px}
+.section-intro{max-width:680px;margin:0 auto 38px;text-align:center;color:#60716e}
+.grid{max-width:1050px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border:1px solid #e0ebe7;border-radius:16px;padding:24px;box-shadow:0 8px 25px rgba(20,65,58,.05)}
+.icon{width:42px;height:42px;display:grid;place-items:center;border-radius:11px;background:#e5f4ef;color:#0c6255;font-size:1.2rem;margin-bottom:16px}
+.card h3{margin-bottom:8px;font-size:1.05rem}.card p{color:#687875;font-size:.92rem}
+.flow{max-width:1050px;margin:auto;display:flex;align-items:center;gap:12px}
+.step{flex:1;text-align:center;padding:22px 12px;background:#fff;border:1px solid #dce9e5;border-radius:14px}
+.number{color:#0c6255;font-weight:800;font-size:.8rem;margin-bottom:7px}.step strong{display:block}.step small{color:#687875}
+.arrow{color:#7a9791;font-size:1.5rem}
+.cta{background:#0c6255;color:#fff;text-align:center;padding:65px 7%}.cta p{max-width:680px;margin:12px auto 0;color:#d8eee9}
+footer{text-align:center;padding:22px;color:#71817e;font-size:.82rem;background:#fff}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.flow{flex-direction:column}.arrow{transform:rotate(90deg)}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}nav{padding:18px 5%}.hero{padding:65px 5%}h1{letter-spacing:4px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">TRACEORA</div><div class="badge">Farm-to-Fork Traceability</div></nav>
+
+<header class="hero">
+<div class="hero-inner">
+<span class="eyebrow">Low-Cost IoT • Secure Logistics</span>
+<h1>TRACEORA</h1>
+<div class="tagline">Your Produce Travels. We Remember.</div>
+<p class="description">
+TRACEORA is a compact, low-cost IoT package monitoring node designed for agricultural shipments.
+It detects environmental and handling risks such as temperature, humidity, ethylene indicators,
+shocks and package flips, while continuing to log data even when connectivity is unavailable.
+</p>
+<div class="buttons"><a class="btn primary" href="#how">How It Works</a><a class="btn secondary" href="#features">Explore Features</a></div>
+</div>
+</header>
+
+<section class="section" id="features">
+<h2>One device. A complete shipment trail.</h2>
+<p class="section-intro">TRACEORA travels with the produce, creating an authenticated digital record of its journey from collection point to destination.</p>
+<div class="grid">
+<article class="card"><div class="icon">◉</div><h3>Multi-Parameter Monitoring</h3><p>Tracks temperature, humidity, ethylene-related indicators, acceleration and orientation changes.</p></article>
+<article class="card"><div class="icon">▣</div><h3>Offline-First Logging</h3><p>Sensor records are stored locally on FAT32 SD storage so connectivity gaps do not erase the journey.</p></article>
+<article class="card"><div class="icon">⌁</div><h3>Authenticated Data</h3><p>Records are cryptographically signed before storage and transmission to help detect unauthorized changes.</p></article>
+<article class="card"><div class="icon">☀</div><h3>Solar + Battery Power</h3><p>Solar power harvesting with a rechargeable battery pack supports longer, lower-maintenance operation.</p></article>
+</div>
+</section>
+
+<section class="section" id="how">
+<h2>How TRACEORA works</h2>
+<p class="section-intro">Detect → record → transmit → verify → understand.</p>
+<div class="flow">
+<div class="step"><div class="number">01</div><strong>Sense</strong><small>Collect shipment data</small></div><div class="arrow">→</div>
+<div class="step"><div class="number">02</div><strong>Process</strong><small>STM32 detects events</small></div><div class="arrow">→</div>
+<div class="step"><div class="number">03</div><strong>Store</strong><small>Sign & save offline</small></div><div class="arrow">→</div>
+<div class="step"><div class="number">04</div><strong>Transmit</strong><small>GSM/SMS when available</small></div><div class="arrow">→</div>
+<div class="step"><div class="number">05</div><strong>Visualize</strong><small>Server + dashboard</small></div>
+</div>
+</section>
+
+<section class="cta"><h2>Every Journey. Every Signal. Verified.</h2>
+<p>TRACEORA brings affordable monitoring, offline resilience and cryptographically verifiable traceability to small and medium-sized agricultural supply chains.</p>
+</section>
+
+<footer>TRACEORA © 2026 • Low-Cost IoT Blockchain Nodes for Farm-to-Fork Traceability</footer>
+</body>
+</html>
