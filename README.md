@@ -37,7 +37,7 @@ Solar power harvesting along with a battery pack is meant to increase uptime and
 - **Blockchain Based Integrity Check:** Batch hashes of the records can be anchored on the blockchain for integrity verification.
 - **Interactive Dashboard:** All shipment history, sensor readings, detected events, and record integrity check is displayed on one central dashboard.
   
-## ⚙️ System Architecture
+##  System Architecture
 
 ```
        AGRICULTURAL PRODUCE PACKAGE
