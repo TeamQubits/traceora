@@ -7,12 +7,43 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Arial,Helvetica,sans-serif;background:#f7faf9;color:#102a2a;line-height:1.6}
-nav{display:flex;justify-content:space-between;align-items:center;padding:22px 7%;background:#fff;border-bottom:1px solid #e2ebe8}
+/*nav{display:flex;justify-content:space-between;align-items:center;padding:22px 7%;background:#fff;border-bottom:1px solid #e2ebe8}*/
 .logo{font-size:1.5rem;font-weight:800;letter-spacing:2px;color:#0c6255}
 .badge{font-size:.78rem;padding:7px 12px;border:1px solid #b9d8d0;border-radius:999px;color:#0c6255;background:#f1f8f5}
 .hero{min-height:72vh;display:grid;place-items:center;padding:80px 7%;background:linear-gradient(135deg,#fff,#edf7f3)}
 .hero-inner{max-width:1050px;text-align:center}
 .eyebrow{display:inline-block;margin-bottom:18px;color:#0c6255;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;font-size:.82rem}
+
+/* ===== NAVBAR CSS: START ===== */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 7%;
+    background:#fff;
+    border-bottom:1px solid #e2ebe8;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#102a2a;
+    font-weight:600;
+    transition:color 0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#0c6255;
+}
+/* ===== NAVBAR CSS: END ===== */
+
 h1{font-size:clamp(3.4rem,10vw,7rem);letter-spacing:8px;line-height:1;color:#0b2927}
 .tagline{margin:20px 0 18px;font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:600;color:#24675d}
 .description{max-width:780px;margin:auto;font-size:1.05rem;color:#536765}
@@ -36,8 +67,24 @@ footer{text-align:center;padding:22px;color:#71817e;font-size:.82rem;background:
 </style>
 </head>
 <body>
-<nav><div class="logo">TRACEORA</div><div class="badge">Farm-to-Fork Traceability</div></nav>
 
+<!-- ===== NAVBAR HTML: START ===== -->
+<nav>
+    <div class="logo">TRACEORA</div>
+
+    <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="#components">Component</a>
+        <a href="#budget">Budget</a>
+    </div>
+
+    <div class="badge">Farm-to-Fork Traceability</div>
+</nav>
+<!-- ===== NAVBAR HTML: END ===== -->
+```
+<!----
+<nav><div class="logo">TRACEORA</div><div class="badge">Farm-to-Fork Traceability</div></nav>
+-->
 <header class="hero">
 <div class="hero-inner">
 <span class="eyebrow">Low-Cost IoT • Secure Logistics</span>
